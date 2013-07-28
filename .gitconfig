@@ -1,3 +1,5 @@
 [user]
 	name = keisatou
 	email = dummy
+[color]
+	ui = auto
