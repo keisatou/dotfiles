@@ -3,3 +3,5 @@
 	email = dummy
 [color]
 	ui = auto
+[alias]
+    hist = log --date=iso --pretty=format:\"[%ad] %h %an : %s\"
