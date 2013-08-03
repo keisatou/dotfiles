@@ -8,6 +8,8 @@
 :set incsearch
 :set hidden
 :filetype plugin on
+:set modeline
+:set modelines=5
 
 " refer to :help filetype
 :filetype on
