@@ -5,9 +5,6 @@ export LC_CTYPE=ja_JP.UTF-8
 export CLICOLOR=yes
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-export PATH=${HOME}/.phpenv/bin:${HOME}/bin:${PATH}
-eval "$(phpenv init -)"
-
 export MANPATH=$MANPATH:/opt/local/man:/usr/local/man
 export CVSROOT=${HOME}/repo_cvs
 export CVSEDITOR=/usr/bin/vim
@@ -71,6 +68,6 @@ export LESS='r'
 #export PATH="/usr/local/heroku/bin:$PATH"
 
 # rbenv & phpenv
-export PATH=${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${PATH}
+export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${PATH}
 eval "$(rbenv init -)"
 eval "$(phpenv init -)"
