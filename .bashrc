@@ -47,6 +47,9 @@ alias crontab="EDITOR=/usr/bin/vi crontab"
 # tmux
 alias tl="tmux list-sessions"
 
+# git
+alias gdfh="git diff FETCH_HEAD"
+
 # Perl
 perltest () {
     perl ./Makefile.PL PREFIX=${HOME}/work/perl/modules/Testing
