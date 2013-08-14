@@ -23,8 +23,7 @@ export PYTHONSTARTUP=${HOME}/.pythonrc
 
 #alias ls="ls -F"
 alias ls="ls -G"
-alias ll="ls -l"
-alias la="ls -a"
+alias ll="ls -la"
 alias rm="rm -i"
 alias cp="cp -i"
 alias j="jobs"
