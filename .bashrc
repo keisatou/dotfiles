@@ -69,7 +69,8 @@ export LESS='r'
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
 
-# rbenv & phpenv
-export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${PATH}
+# rbenv & phpenv & plenv
+export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${HOME}/.plenv/bin:${PATH}
 eval "$(rbenv init -)"
 eval "$(phpenv init -)"
+eval "$(plenv init -)"
