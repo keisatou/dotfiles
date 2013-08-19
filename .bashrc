@@ -74,3 +74,5 @@ export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${HOME}/
 eval "$(rbenv init -)"
 eval "$(phpenv init -)"
 eval "$(plenv init -)"
+
+export PATH=${HOME}/bin:${PATH}
