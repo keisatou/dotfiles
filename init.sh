@@ -12,6 +12,7 @@ fi
 cd $DOTFILES
 
 git submodule update --init
+git checkout master
 
 ln -s $DOTFILES/vimrc          $HOME/.vimrc
 ln -s $DOTFILES/vim            $HOME/.vim
