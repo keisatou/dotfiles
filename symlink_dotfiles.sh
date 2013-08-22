@@ -11,6 +11,8 @@ fi
 
 cd $DOTFILES
 
+git submodule update --init
+
 ln -s $DOTFILES/vimrc          $HOME/.vimrc
 ln -s $DOTFILES/vim            $HOME/.vim
 ln -s $DOTFILES/tmux.conf      $HOME/.tmux.conf
