@@ -1,15 +1,16 @@
 #!/bin/sh
 
-# default to "$HOME/Dropbox/dotfiles"
-DOTFILES="${MY_DOTFILES_TARGET_DIR:-$HOME/Dropbox/dotfiles}"
+# get the directory name the dotfiles are in.
+# (on the assumption that dot files are in the same directory as this script.)
+# this way you can git-clone dotfile directory anywhere you like :)
+cd `dirname $0`
+DOTFILES=$PWD
 
 if [ ! -d "$DOTFILES" ]
 then
     echo "ERROR: dotfiles directory does not exist: $DOTFILES"
     exit 1
 fi
-
-cd $DOTFILES
 
 git submodule update --init
 git submodule foreach 'git checkout master'
