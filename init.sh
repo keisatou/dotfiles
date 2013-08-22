@@ -1,11 +1,11 @@
 #!/bin/sh
 
-DROPBOX_DIR="$HOME/Dropbox"
-DOTFILES="$DROPBOX_DIR/dotfiles"
+# default to "$HOME/Dropbox/dotfiles"
+DOTFILES="${MY_DOTFILES_TARGET_DIR:-$HOME/Dropbox/dotfiles}"
 
 if [ ! -d "$DOTFILES" ]
 then
-    echo "Please create dotfiles to $DROPBOX_DIR"
+    echo "ERROR: dotfiles directory does not exist: $DOTFILES"
     exit 1
 fi
 
