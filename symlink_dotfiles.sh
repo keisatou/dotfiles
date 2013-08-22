@@ -21,3 +21,5 @@ ln -s $DOTFILES/gitconfig      $HOME/.gitconfig
 ln -s $DOTFILES/chef           $HOME/.chef
 ln -s $DOTFILES/bash_profile   $HOME/.bash_profile
 ln -s $DOTFILES/bashrc         $HOME/.bashrc
+
+vim -c ':BundleInstall!'
