@@ -2,10 +2,10 @@
 My dotfiles
 
 # Setup
-To set up, execute the following commands:
+It's very easy to set up :)
+git clone and execute init.sh in the repository like this:
 
 ```
-$ git clone https://github.com/keisatou/dotfiles.git $HOME/Dropbox/dotfiles
-$ cd $HOME/Dropbox/dotfiles
-$ ./init.sh
+$ git clone https://github.com/keisatou/dotfiles.git $HOME/path/to/dotfiles
+$ $HOME/path/to/dotfiles/init.sh
 ```
