@@ -15,13 +15,13 @@ fi
 git submodule update --init
 git submodule foreach 'git checkout master'
 
-ln -sf      $DOTFILES/vimrc          $HOME/.vimrc
-ln -sfh     $DOTFILES/vim            $HOME/.vim
-ln -sf      $DOTFILES/tmux.conf      $HOME/.tmux.conf
-ln -sf      $DOTFILES/inputrc        $HOME/.inputrc
-ln -sf      $DOTFILES/gitconfig      $HOME/.gitconfig
-ln -sfh     $DOTFILES/chef           $HOME/.chef
-ln -sf      $DOTFILES/bash_profile   $HOME/.bash_profile
-ln -sf      $DOTFILES/bashrc         $HOME/.bashrc
+ln -sf      "$DOTFILES/vimrc"          "$HOME/.vimrc"
+ln -sfh     "$DOTFILES/vim"            "$HOME/.vim"
+ln -sf      "$DOTFILES/tmux.conf"      "$HOME/.tmux.conf"
+ln -sf      "$DOTFILES/inputrc"        "$HOME/.inputrc"
+ln -sf      "$DOTFILES/gitconfig"      "$HOME/.gitconfig"
+ln -sfh     "$DOTFILES/chef"           "$HOME/.chef"
+ln -sf      "$DOTFILES/bash_profile"   "$HOME/.bash_profile"
+ln -sf      "$DOTFILES/bashrc"         "$HOME/.bashrc"
 
 vim -c ':BundleInstall!'
