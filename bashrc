@@ -28,11 +28,11 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias j="jobs"
 alias vi="/usr/bin/vim"
-alias mysql="/usr/local/mysql/bin/mysql"
-alias mysqladmin="sudo -u mysql /usr/local/mysql/bin/mysqladmin"
-alias mysql_safe="sudo -u mysql /usr/local/mysql/bin/mysqld_safe"
-alias mysql_stop="mysqladmin -u root shutdown"
-alias mysql_start="mysql_safe"
+#alias mysql="/usr/local/mysql/bin/mysql"
+#alias mysqladmin="sudo -u mysql /usr/local/mysql/bin/mysqladmin"
+#alias mysql_safe="sudo -u mysql /usr/local/mysql/bin/mysqld_safe"
+#alias mysql_stop="mysqladmin -u root shutdown"
+#alias mysql_start="mysql_safe"
 
 alias mail_start="sudo postfix start"
 alias mail_stop="sudo postfix stop"
@@ -70,7 +70,7 @@ export LESS='r'
 #export PATH="/usr/local/heroku/bin:$PATH"
 
 # rbenv & phpenv & plenv
-export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${HOME}/.plenv/bin:${PATH}
+export PATH=${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${HOME}/.phpenv/bin:${HOME}/.plenv/shims:${PATH}
 eval "$(rbenv init -)"
 eval "$(phpenv init -)"
 eval "$(plenv init -)"
