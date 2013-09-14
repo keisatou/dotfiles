@@ -8,6 +8,7 @@ nnoremap k gk
 " toggle highlight with C-h
 nmap <C-H> :se hls!<CR>
 
+
 "
 " general settings
 "
@@ -45,10 +46,12 @@ set nobackup
 set shortmess+=I
 set history=9999
 
+
 "
 " appearance
 "
 colorscheme mycolor
+
 
 "
 " status line
@@ -64,6 +67,7 @@ set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
 
+
 "
 " Encodings
 "
@@ -77,6 +81,7 @@ nmap ,es :e ++enc=cp932<CR>
 nmap ,ej :e ++enc=iso-2022-jp<CR>
 " UTF-8
 nmap ,eu :e ++enc=utf-8<CR>
+
 
 "
 " Vundle https://github.com/gmarik/vundle
@@ -104,3 +109,10 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 
 filetype plugin indent on     " required!
+
+
+"
+" File type settings
+"
+" JSON
+autocmd BufNewFile,BufRead *.json set ft=javascript
