@@ -128,3 +128,10 @@ augroup END
 "
 " JSON
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+
+"
+" Templates
+"
+" Perl
+autocmd BufNewFile *.pl 0r ~/.vim/template/perl.txt
