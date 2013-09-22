@@ -24,4 +24,4 @@ ln -sfh     "$DOTFILES/chef"           "$HOME/.chef"
 ln -sf      "$DOTFILES/bash_profile"   "$HOME/.bash_profile"
 ln -sf      "$DOTFILES/bashrc"         "$HOME/.bashrc"
 
-vim -c ':BundleInstall!'
+vim -c ':NeoBundleInstall!'
