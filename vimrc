@@ -7,6 +7,8 @@ nnoremap j gj
 nnoremap k gk
 " toggle highlight with C-h
 nmap <C-H> :se hls!<CR>
+let mapleader=","
+inoremap <leader>, <C-x><C-o>
 
 
 "
@@ -101,29 +103,24 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
 
-"" original repos on github
-"NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'Lokaltog/vim-easymotion'
-"NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"" vim-scripts repos
-"NeoBundle 'L9'
-"NeoBundle 'FuzzyFinder'
-"NeoBundle 'rails.vim'
-"" Non github repos
-"NeoBundle 'git://git.wincent.com/command-t.git'
-"" gist repos
-"NeoBundle 'gist:Shougo/656148', {
-"      \ 'name': 'everything.vim',
-"      \ 'script_type': 'plugin'}
-"" Non git repos
-"NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-"NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
-
+NeoBundle "c9s/perlomni.vim"
+NeoBundle "vim-perl/vim-perl"
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'eagletmt/jsonpp-vim' " pretty-print JSON in a buffer
 
 filetype plugin indent on     " required!
 
 " Installation check.
 NeoBundleCheck
+
+" vim-perl/vim-perl
+augroup filetypedetect
+    au BufNewFile,BufRead *.psgi    setf perl
+    au BufNewFile,BufRead *.t       setf perl
+    au BufNewFile,BufRead *.tt      setf tt2html
+    au BufNewFile,BufRead *.tt2     setf tt2html
+    au BufNewFile,BufRead cpanfile  setf perl
+augroup END
 
 
 "
