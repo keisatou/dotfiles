@@ -23,5 +23,6 @@ ln -sf      "$DOTFILES/gitconfig"      "$HOME/.gitconfig"
 ln -sfh     "$DOTFILES/chef"           "$HOME/.chef"
 ln -sf      "$DOTFILES/bash_profile"   "$HOME/.bash_profile"
 ln -sf      "$DOTFILES/bashrc"         "$HOME/.bashrc"
+ln -sf      "$DOTFILES/gitignore"      "$HOME/.gitignore"
 
 vim -c ':NeoBundleInstall!'
