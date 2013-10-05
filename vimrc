@@ -7,8 +7,9 @@ nnoremap j gj
 nnoremap k gk
 " toggle highlight with C-h
 nmap <C-H> :se hls!<CR>
-let mapleader=","
-inoremap <leader>, <C-x><C-o>
+
+" Omni-completion
+inoremap <C-b> <C-x><C-o>
 
 
 "
