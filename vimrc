@@ -92,7 +92,8 @@ nmap ,eu :e ++enc=utf-8<CR>
 set nocompatible
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle/
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -108,6 +109,7 @@ NeoBundle "c9s/perlomni.vim"
 NeoBundle "vim-perl/vim-perl"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'eagletmt/jsonpp-vim' " pretty-print JSON in a buffer
+NeoBundle 'suan/vim-instant-markdown' " Instant Markdown previews from VIm!
 
 filetype plugin indent on     " required!
 
