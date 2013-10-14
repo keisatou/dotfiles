@@ -17,8 +17,8 @@ inoremap <C-b> <C-x><C-o>
 "
 set background=dark
 syntax on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set incsearch
 set hidden
 set modeline
