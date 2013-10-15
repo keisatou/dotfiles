@@ -1,2 +1,8 @@
+# Vim
 *.swp
+
+# Vagrant
 .vagrant
+
+# Bundler
+.bundle
