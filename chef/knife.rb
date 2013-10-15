@@ -7,4 +7,7 @@ validation_key           '/etc/chef-server/chef-validator.pem'
 chef_server_url          'https://satou-no-MacBook-Air.local:443'
 syntax_check_cache_path  '/Users/keisatou/.chef/syntax_check_cache'
 knife[:solo_path] = '/tmp/chef-solo'
-cookbook_path            './cookbooks'
+cookbook_path             [
+                            './cookbooks',
+                            './site-cookbooks'
+                          ]
