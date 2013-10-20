@@ -41,12 +41,12 @@ vagchef () {
   vagrant up
   vagrant ssh-config --host "$host" >> ${HOME}/.ssh/config
   knife solo init "$repo"
-  cd "$repo"
   git init && git add . && git commit -m 'first commit'
+  cd "$repo"
   knife solo prepare "$host"
-  git add "nodes/$host.json"
-  git commit -m 'add node json file'
   knife cookbook create base -o site-cookbooks
+  git add "nodes/$host.json" "site-cookbooks/base/"
+  git commit -m 'add node json file and base cookbook'
   vagrant halt
   vagrant sandbox on
   vagrant sandbox commit
