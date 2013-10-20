@@ -47,6 +47,10 @@ vagchef () {
   git add "nodes/$host.json"
   git commit -m 'add node json file'
   knife cookbook create base -o site-cookbooks
+  vagrant halt
+  vagrant sandbox on
+  vagrant sandbox commit
+  vagrant up
   )
 }
 
