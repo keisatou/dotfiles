@@ -22,32 +22,32 @@ alias tl="tmux list-sessions"
 alias gdfh="git diff FETCH_HEAD"
 
 # Functions
-# Perl
+## Perl
 perltest () {
-    perl ./Makefile.PL PREFIX=${HOME}/work/perl/modules/Testing
+  perl ./Makefile.PL PREFIX=${HOME}/work/perl/modules/Testing
 }
 pmver () {
-    perl -M$1 -l -e "print $1->VERSION;"
+  perl -M$1 -l -e "print $1->VERSION;"
 }
 
 # *env settings
 ## rbenv
 [ -d ${HOME}/.rbenv ] &&
-                export PATH=${HOME}/.rbenv/shims:${PATH} &&
-                eval "$(rbenv init -)"
+  export PATH=${HOME}/.rbenv/shims:${PATH} &&
+  eval "$(rbenv init -)"
 ## phpenv
 [ -d ${HOME}/.phpenv ] &&
-                export PATH=${HOME}/.phpenv/bin:${HOME}/.phpenv/shims:${PATH} &&
-                eval "$(phpenv init -)"
+  export PATH=${HOME}/.phpenv/bin:${HOME}/.phpenv/shims:${PATH} &&
+  eval "$(phpenv init -)"
 ## plenv
 [ -d ${HOME}/.plenv ] &&
-                export PATH=${HOME}/.plenv/bin:${HOME}/.plenv/shims:${PATH} &&
-                eval "$(plenv init -)"
+  export PATH=${HOME}/.plenv/bin:${HOME}/.plenv/shims:${PATH} &&
+  eval "$(plenv init -)"
 ## pyenv
 [ -d ${HOME}/.pyenv ] &&
-                export PYENV_ROOT="$HOME/.pyenv" &&
-                export PATH=${HOME}/.pyenv/shims:${PATH} &&
-                eval "$(pyenv init -)"
+  export PYENV_ROOT="$HOME/.pyenv" &&
+  export PATH=${HOME}/.pyenv/shims:${PATH} &&
+  eval "$(pyenv init -)"
 
 # PATH
 export PATH=${HOME}/bin:${PATH}
