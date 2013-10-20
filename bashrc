@@ -29,6 +29,26 @@ perltest () {
 pmver () {
   perl -M$1 -l -e "print $1->VERSION;"
 }
+## Vagrant/Chef
+vagchef () {
+  (
+  local host="$1"
+  local box="$2"
+  local repo="chef-repo"
+  [ $# -lt 2 ] && echo "vagchef <host> <box>" && return 1
+  vagrant init
+  sed -e 's/config\.vm\.box = "base"/config.vm.box = "'"$box"'"/' -i '' Vagrantfile
+  vagrant up
+  vagrant ssh-config --host "$host" >> ${HOME}/.ssh/config
+  knife solo init "$repo"
+  cd "$repo"
+  git init && git add . && git commit -m 'first commit'
+  knife solo prepare "$host"
+  git add "nodes/$host.json"
+  git commit -m 'add node json file'
+  knife cookbook create base -o site-cookbooks
+  )
+}
 
 # *env settings
 ## rbenv
