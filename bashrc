@@ -20,6 +20,8 @@ alias javac="javac -J-Dfile.encoding=UTF8"
 alias tl="tmux list-sessions"
 ## git
 alias gdfh="git diff FETCH_HEAD"
+## perl
+alias perldoc="perldoc -M Pod::Text::Color::Delight"
 
 # Functions
 ## Perl
