@@ -17,8 +17,8 @@ inoremap <C-b> <C-x><C-o>
 "
 set background=dark
 syntax on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set incsearch
 set hidden
 set modeline
@@ -131,6 +131,13 @@ augroup END
 "
 " JSON
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" Perl
+let s:bundle = neobundle#get("vim-perl")
+function! s:bundle.hooks.on_source(bundle)
+    set tabstop=4
+    set shiftwidth=4
+endfunction
 
 
 "
