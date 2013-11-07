@@ -145,3 +145,6 @@ endfunction
 "
 " Perl
 autocmd BufNewFile *.pl 0r ~/.vim/template/perl.txt
+
+" HTML
+autocmd BufNewFile *.html 0r ~/.vim/template/bootstrap.html
