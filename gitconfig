@@ -6,6 +6,6 @@
 [alias]
     hist = log --date=iso --pretty=format:\"[%ad] %h %an : %s\"
 [core]
-	excludesfile = /Users/keisatou/.gitignore
-[push]
-	default = simple
+	excludesfile = ~/.gitignore
+#[push]
+#	default = simple
