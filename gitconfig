@@ -9,3 +9,7 @@
 	excludesfile = ~/.gitignore
 #[push]
 #	default = simple
+[pager]
+	log = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
+	show = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
+	diff = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
