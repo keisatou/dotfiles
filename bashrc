@@ -77,3 +77,7 @@ vagchef () {
 
 # PATH
 export PATH=${HOME}/bin:${PATH}
+
+# go
+export GOPATH=${HOME}/go
+export PATH=${GOPATH}/bin:${PATH}
