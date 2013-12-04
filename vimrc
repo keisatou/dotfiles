@@ -89,7 +89,6 @@ nmap ,eu :e ++enc=utf-8<CR>
 "
 " NeoBundle https://github.com/Shougo/neobundle.vim
 "
-set nocompatible
 
 if has('vim_starting')
   set nocompatible               " Be iMproved
@@ -110,6 +109,7 @@ NeoBundle "vim-perl/vim-perl"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'eagletmt/jsonpp-vim' " pretty-print JSON in a buffer
 NeoBundle 'suan/vim-instant-markdown' " Instant Markdown previews from VIm!
+NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
 
 filetype plugin indent on     " required!
 
