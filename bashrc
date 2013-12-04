@@ -76,7 +76,7 @@ vagchef () {
   eval "$(pyenv init -)"
 
 # PATH
-export PATH=${HOME}/bin:${PATH}
+export PATH=/usr/local/bin:${HOME}/bin:${PATH}
 
 # go
 export PATH=${PATH}:/usr/local/go/bin
