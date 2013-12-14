@@ -22,6 +22,8 @@ alias tl="tmux list-sessions"
 alias gdfh="git diff FETCH_HEAD"
 ## perl
 alias perldoc="perldoc -M Pod::Text::Color::Delight"
+## docker
+alias dl='docker ps -l -q'
 
 # Functions
 ## Perl
