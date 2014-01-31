@@ -58,6 +58,9 @@ vagchef () {
   )
 }
 
+# PATH
+export PATH=${HOME}/bin:/usr/local/bin:${PATH}
+
 # *env settings
 ## rbenv
 [ -d ${HOME}/.rbenv ] &&
@@ -76,9 +79,6 @@ vagchef () {
   export PYENV_ROOT="$HOME/.pyenv" &&
   export PATH=${HOME}/.pyenv/shims:${PATH} &&
   eval "$(pyenv init -)"
-
-# PATH
-export PATH=/usr/local/bin:${HOME}/bin:${PATH}
 
 # go
 export PATH=${PATH}:/usr/local/go/bin
