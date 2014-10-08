@@ -84,3 +84,6 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 export PATH=${PATH}:/usr/local/go/bin
 export GOPATH=${HOME}/go
 export PATH=${GOPATH}/bin:${PATH}
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
