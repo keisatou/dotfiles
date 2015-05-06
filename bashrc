@@ -91,3 +91,6 @@ JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
+
+# node.js
+export PATH="$HOME/.node/bin:$PATH"
