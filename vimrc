@@ -48,6 +48,7 @@ set noequalalways
 set nobackup
 set shortmess+=I
 set history=9999
+set ambiwidth=double
 
 
 "
