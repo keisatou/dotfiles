@@ -81,9 +81,9 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
   eval "$(pyenv init -)"
 
 # go
-export PATH=${PATH}:/usr/local/go/bin
-export GOPATH=${HOME}/go
-export PATH=${GOPATH}/bin:${PATH}
+#export PATH=${PATH}:/usr/local/go/bin
+#export GOPATH=${HOME}/go
+#export PATH=${GOPATH}/bin:${PATH}
 
 # java
 ## http://qiita.com/hereticreader/items/79d9bddb77efaf2ca255
