@@ -110,6 +110,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'eagletmt/jsonpp-vim' " pretty-print JSON in a buffer
 NeoBundle 'suan/vim-instant-markdown' " Instant Markdown previews from VIm!
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
+NeoBundle "elixir-lang/vim-elixir"
 
 filetype plugin indent on     " required!
 
