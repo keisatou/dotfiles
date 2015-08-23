@@ -104,13 +104,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
 
-NeoBundle "c9s/perlomni.vim"
-NeoBundle "vim-perl/vim-perl"
+NeoBundleLazy "c9s/perlomni.vim", {"autoload": {"filetypes": ['perl']}}
+NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'eagletmt/jsonpp-vim' " pretty-print JSON in a buffer
-NeoBundle 'suan/vim-instant-markdown' " Instant Markdown previews from VIm!
+NeoBundleLazy 'eagletmt/jsonpp-vim', {"autoload": {"filetypes": ['json']}} " pretty-print JSON in a buffer
+NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
-NeoBundle "elixir-lang/vim-elixir"
+NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
 
 filetype plugin indent on     " required!
 
@@ -140,6 +140,12 @@ function! s:bundle.hooks.on_source(bundle)
     set shiftwidth=4
 endfunction
 
+" Elixir
+let s:bundle = neobundle#get("vim-elixir")
+function! s:bundle.hooks.on_source(bundle)
+    set tabstop=2
+    set shiftwidth=2
+endfunction
 
 "
 " Templates
