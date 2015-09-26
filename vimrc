@@ -112,6 +112,7 @@ NeoBundleLazy 'eagletmt/jsonpp-vim', {"autoload": {"filetypes": ['json']}} " pre
 NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
 NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
+NeoBundle "editorconfig/editorconfig-vim"
 
 filetype plugin indent on     " required!
 
