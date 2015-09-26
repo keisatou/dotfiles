@@ -113,6 +113,7 @@ NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
 NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
 NeoBundle "editorconfig/editorconfig-vim"
+NeoBundle "scrooloose/syntastic"
 
 filetype plugin indent on     " required!
 
@@ -147,6 +148,19 @@ let s:bundle = neobundle#get("vim-elixir")
 function! s:bundle.hooks.on_source(bundle)
     set tabstop=2
     set shiftwidth=2
+endfunction
+
+" syntastic
+let s:bundle = neobundle#get("syntastic")
+function! s:bundle.hooks.on_source(bundle)
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
 endfunction
 
 "
