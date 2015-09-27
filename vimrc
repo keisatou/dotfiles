@@ -114,6 +114,7 @@ NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go
 NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "scrooloose/syntastic"
+NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
 
 filetype plugin indent on     " required!
 
