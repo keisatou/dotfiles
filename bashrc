@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 export CLICOLOR=yes
 export LSCOLORS=gxfxcxdxbxegedabagacad
-export EDITOR=vim
+export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
 export HISTCONTROL=ignoreboth
 export PS1='[\u@\h]$ '
 export LESS='r'
@@ -14,7 +14,9 @@ alias ll="ls -la"
 alias rm="rm -i"
 alias cp="cp -i"
 alias j="jobs"
-alias vi="/usr/bin/vim"
+#alias vi="/usr/bin/vim"
+alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias javac="javac -J-Dfile.encoding=UTF8"
 ## tmux
 alias tl="tmux list-sessions"
