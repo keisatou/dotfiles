@@ -167,6 +167,7 @@ function! s:bundle.hooks.on_source(bundle)
       \'proprietary attribute "ng-',
       \'proprietary attribute "pdk-'
       \]
+  let g:syntastic_javascript_checkers = ['eslint']
 endfunction
 
 "
