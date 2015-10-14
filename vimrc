@@ -97,30 +97,29 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+  " Recommended to install
+  " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+  NeoBundle 'Shougo/vimproc'
 
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
+  NeoBundleLazy "c9s/perlomni.vim", {"autoload": {"filetypes": ['perl']}}
+  NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundleLazy 'eagletmt/jsonpp-vim', {"autoload": {"filetypes": ['json']}} " pretty-print JSON in a buffer
+  NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
+  NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
+  NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
+  NeoBundle "editorconfig/editorconfig-vim"
+  NeoBundle "scrooloose/syntastic"
+  NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
 
-NeoBundleLazy "c9s/perlomni.vim", {"autoload": {"filetypes": ['perl']}}
-NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
-NeoBundle 'Shougo/unite.vim'
-NeoBundleLazy 'eagletmt/jsonpp-vim', {"autoload": {"filetypes": ['json']}} " pretty-print JSON in a buffer
-NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
-NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
-NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
-NeoBundle "editorconfig/editorconfig-vim"
-NeoBundle "scrooloose/syntastic"
-NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
+  filetype plugin indent on     " required!
 
-filetype plugin indent on     " required!
-
-" Installation check.
-NeoBundleCheck
+  " Installation check.
+  NeoBundleCheck
+call neobundle#end()
 
 " vim-perl/vim-perl
 augroup filetypedetect
