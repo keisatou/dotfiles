@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 export CLICOLOR=yes
 export LSCOLORS=gxfxcxdxbxegedabagacad
-export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+#export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
 export HISTCONTROL=ignoreboth
 export PS1='[\u@\h]$ '
 export LESS='r'
@@ -15,8 +15,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias j="jobs"
 #alias vi="/usr/bin/vim"
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+#alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+#alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias javac="javac -J-Dfile.encoding=UTF8"
 ## tmux
 alias tl="tmux list-sessions"
@@ -99,3 +99,4 @@ export PATH="$HOME/.node/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=/home/keisatou/.node/bin:/home/keisatou/bin:/usr/local/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/git/bin
