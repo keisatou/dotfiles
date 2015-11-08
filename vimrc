@@ -93,7 +93,9 @@ nmap ,eu :e ++enc=utf-8<CR>
 "
 
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
@@ -115,11 +117,13 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle "scrooloose/syntastic"
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
 
-  filetype plugin indent on     " required!
-
-  " Installation check.
-  NeoBundleCheck
 call neobundle#end()
+
+" required!
+filetype plugin indent on
+
+" Installation check.
+NeoBundleCheck
 
 " vim-perl/vim-perl
 augroup filetypedetect
