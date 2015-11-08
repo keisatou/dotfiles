@@ -116,7 +116,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle "editorconfig/editorconfig-vim"
   NeoBundle "scrooloose/syntastic"
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
-
+NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
 call neobundle#end()
 
 " required!
@@ -146,6 +146,15 @@ let s:bundle = neobundle#get("vim-perl")
 function! s:bundle.hooks.on_source(bundle)
     set tabstop=4
     set shiftwidth=4
+endfunction
+
+" Python
+autocmd BufNewFile,BufRead *.py set ft=python
+let s:bundle = neobundle#get("jedi-vim")
+function! s:bundle.hooks.on_source(bundle)
+  let g:jedi#auto_initialization = 1
+  set tabstop=4
+  set shiftwidth=4
 endfunction
 
 " Elixir
