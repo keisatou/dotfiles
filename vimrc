@@ -120,8 +120,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle "editorconfig/editorconfig-vim"
   NeoBundle "scrooloose/syntastic"
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
-NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
-"NeoBundle "nathanaelkane/vim-indent-guides"
+  NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
 
 call neobundle#end()
 
