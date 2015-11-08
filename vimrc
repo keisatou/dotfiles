@@ -11,6 +11,9 @@ nmap <C-H> :se hls!<CR>
 " Omni-completion
 inoremap <C-b> <C-x><C-o>
 
+" set <leader>
+let mapleader = ","
+
 
 "
 " general settings
@@ -152,9 +155,10 @@ endfunction
 autocmd BufNewFile,BufRead *.py set ft=python
 let s:bundle = neobundle#get("jedi-vim")
 function! s:bundle.hooks.on_source(bundle)
-  let g:jedi#auto_initialization = 1
+  let g:jedi#popup_select_first = 0
   set tabstop=4
   set shiftwidth=4
+  setlocal completeopt-=preview
 endfunction
 
 " Elixir
