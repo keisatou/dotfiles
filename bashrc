@@ -26,6 +26,8 @@ alias gdfh="git diff FETCH_HEAD"
 alias perldoc="perldoc -M Pod::Text::Color::Delight"
 ## docker
 alias dl='docker ps -l -q'
+## 
+alias tmux='TERM=xterm-256color tmux'
 
 # Functions
 ## Perl

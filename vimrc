@@ -53,6 +53,7 @@ set shortmess+=I
 set history=9999
 set ambiwidth=double
 set clipboard=unnamed,autoselect
+set t_Co=256
 
 
 "
@@ -120,6 +121,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle "scrooloose/syntastic"
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
 NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
+NeoBundle "nathanaelkane/vim-indent-guides"
+
 call neobundle#end()
 
 " required!
@@ -168,6 +171,12 @@ function! s:bundle.hooks.on_source(bundle)
     set shiftwidth=2
 endfunction
 
+" Reset my auto group
+augroup MyAutoGroup
+  autocmd!
+augroup END
+
+
 " syntastic
 let s:bundle = neobundle#get("syntastic")
 function! s:bundle.hooks.on_source(bundle)
@@ -185,6 +194,16 @@ function! s:bundle.hooks.on_source(bundle)
       \]
   let g:syntastic_javascript_checkers = ['eslint']
 endfunction
+
+if ! empty(neobundle#get("vim-indent-guides"))
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_start_level = 1
+  let g:indent_guides_auto_colors = 0
+  let g:indent_guides_guide_size=1
+  autocmd MyAutoGroup VimEnter,Colorscheme * hi IndentGuidesEven term=bold ctermfg=9 ctermbg=red
+"  autocmd MyAutoGroup VimEnter,Colorscheme * hi IndentGuidesOdd term=bold ctermfg=9 ctermbg=grey
+  autocmd MyAutoGroup VimEnter,Colorscheme * hi IndentGuidesOdd term=bold ctermfg=9 ctermbg=240
+endif
 
 "
 " Templates
