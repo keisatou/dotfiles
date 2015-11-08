@@ -81,8 +81,9 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 ## pyenv
 [ -d ${HOME}/.pyenv ] &&
   export PYENV_ROOT="$HOME/.pyenv" &&
-  export PATH=${HOME}/.pyenv/shims:${PATH} &&
-  eval "$(pyenv init -)"
+  export PATH=${HOME}/.pyenv/bin:${PATH} &&
+  eval "$(pyenv init -)" &&
+  eval "$(pyenv virtualenv-init -)"
 
 # go
 #export PATH=${PATH}:/usr/local/go/bin
@@ -101,4 +102,3 @@ export PATH="$HOME/.node/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH=/home/keisatou/.node/bin:/home/keisatou/bin:/usr/local/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/git/bin
