@@ -113,7 +113,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleLazy "c9s/perlomni.vim", {"autoload": {"filetypes": ['perl']}}
   NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
   NeoBundle 'Shougo/unite.vim'
-  NeoBundleLazy 'eagletmt/jsonpp-vim', {"autoload": {"filetypes": ['json']}} " pretty-print JSON in a buffer
   NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
   NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
   NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
@@ -123,6 +122,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
   NeoBundleLazy 'jmcantrell/vim-virtualenv', {"autoload": {"filetypes": ['python', "python3", "djangohtml"]}}
   NeoBundleLazy "lambdalisue/vim-django-support", {"autoload": {"filetypes": ["python", "python3", "djangohtml"]}}
+  NeoBundleLazy 'elzr/vim-json', {"autoload": {"filetypes": ['json']}}
 
 call neobundle#end()
 
@@ -141,12 +141,6 @@ augroup filetypedetect
     au BufNewFile,BufRead cpanfile  setf perl
 augroup END
 
-
-"
-" File type settings
-"
-" JSON
-autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " Perl
 let s:bundle = neobundle#get("vim-perl")
