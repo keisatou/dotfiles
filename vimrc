@@ -116,8 +116,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
   NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
   NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
-  NeoBundle "editorconfig/editorconfig-vim"
-  NeoBundle "scrooloose/syntastic"
+  NeoBundleLazy "scrooloose/syntastic"
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
   NeoBundleLazy 'davidhalter/jedi-vim', {"autoload": {"filetypes": ['python']}, 'build':{'mac': 'git submodule update --init'}}
   NeoBundleLazy 'jmcantrell/vim-virtualenv', {"autoload": {"filetypes": ['python', "python3", "djangohtml"]}}
@@ -188,7 +187,9 @@ function! s:bundle.hooks.on_source(bundle)
       \'proprietary attribute "pdk-'
       \]
   let g:syntastic_javascript_checkers = ['eslint']
+  let g:syntastic_rst_checkers = ['sphinx']
 endfunction
+
 
 "if ! empty(neobundle#get("vim-indent-guides"))
 "  let g:indent_guides_enable_on_vim_startup = 1
