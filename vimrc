@@ -108,7 +108,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " Recommended to install
   " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-  NeoBundle 'Shougo/vimproc'
+  NeoBundle 'Shougo/vimproc', {
+        \ 'build' : {
+        \     'mac' : 'make -f make_mac.mak',
+        \     'unix' : 'make -f make_unix.mak',
+        \    },
+        \ }
 
   NeoBundleLazy "c9s/perlomni.vim", {"autoload": {"filetypes": ['perl']}}
   NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
