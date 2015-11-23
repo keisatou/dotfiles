@@ -193,6 +193,7 @@ function! s:bundle.hooks.on_source(bundle)
       \]
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_rst_checkers = ['sphinx']
+  let g:syntastic_python_checkers = ['flake8']
 endfunction
 
 
@@ -214,3 +215,7 @@ autocmd BufNewFile *.pl 0r ~/.vim/template/perl.txt
 
 " HTML
 autocmd BufNewFile *.html 0r ~/.vim/template/bootstrap.html
+
+if !empty(glob("~/.vimrc_ext"))
+  source ~/.vimrc_ext
+endif
