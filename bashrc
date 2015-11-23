@@ -17,6 +17,7 @@ alias j="jobs"
 #alias vi="/usr/bin/vim"
 #alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 #alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vi='vim'
 alias javac="javac -J-Dfile.encoding=UTF8"
 ## tmux
 alias tl="tmux list-sessions"
