@@ -7,14 +7,12 @@
     hist = log --date=iso --pretty=format:\"[%ad] %h %an : %s\"
 [core]
 	excludesfile = ~/.gitignore
+#[pager]
+#	log = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
+#	show = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
+#	diff = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
 #[push]
 #	default = simple
-[pager]
-	log = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
-	show = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
-	diff = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
-[push]
-	default = simple
 [filter "media"]
 	clean = git media clean %f
 	smudge = git media smudge %f
