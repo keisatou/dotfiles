@@ -17,6 +17,19 @@ case "$PLATFORM" in
         ;;
 esac
 
+# http://qiita.com/sirone/items/2e233ab9697a030f1335
+echo '[install latest git]'
+if [ "$(which git)" = '/usr/local/bin/git' ]; then
+  echo '/usr/local/bin/git is already installed'
+else
+  (curl -s -o /tmp/git-2.6.2.tar.gz https://www.kernel.org/pub/software/scm/git/git-2.6.2.tar.gz
+  tar zxf /tmp/git-2.6.2.tar.gz -C /tmp/
+  cd /tmp/git-2.6.2
+  make prefix=/usr/local all
+  sudo make prefix=/usr/local install
+  git --version)
+fi
+
 # get the directory name the dotfiles are in.
 # (on the assumption that dot files are in the same directory as this script.)
 # this way you can git-clone dotfile directory anywhere you like :)
