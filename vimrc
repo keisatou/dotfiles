@@ -127,6 +127,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleLazy 'jmcantrell/vim-virtualenv', {"autoload": {"filetypes": ['python', "python3", "djangohtml"]}}
   NeoBundleLazy "lambdalisue/vim-django-support", {"autoload": {"filetypes": ["python", "python3", "djangohtml"]}}
   NeoBundleLazy 'elzr/vim-json', {"autoload": {"filetypes": ['json']}}
+  " http://hagino3000.blogspot.jp/2014/01/vim-python-pep8-indent.html#Message-complete
+  NeoBundleLazy "hynek/vim-python-pep8-indent", {"autoload": {"filetypes": ["python", "python3", "djangohtml"]}}
 
 call neobundle#end()
 
