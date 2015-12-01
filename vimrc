@@ -160,6 +160,7 @@ autocmd BufNewFile,BufRead *.py set ft=python
 let s:bundle = neobundle#get("jedi-vim")
 function! s:bundle.hooks.on_source(bundle)
   let g:jedi#popup_select_first = 0
+  let g:jedi#show_call_signatures = 0
   set tabstop=4
   set shiftwidth=4
   setlocal completeopt-=preview
