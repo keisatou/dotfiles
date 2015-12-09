@@ -84,7 +84,7 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
   export PYENV_ROOT="$HOME/.pyenv" &&
   export PATH=${HOME}/.pyenv/bin:${PATH} &&
   eval "$(pyenv init -)" &&
-  eval "$(pyenv virtualenv-init -)"
+#  eval "$(pyenv virtualenv-init -)"
 
 # go
 #export PATH=${PATH}:/usr/local/go/bin
