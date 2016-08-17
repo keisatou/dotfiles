@@ -22,7 +22,7 @@ echo '[install latest git]'
 if [ "$(which git)" = '/usr/local/bin/git' ]; then
   echo '/usr/local/bin/git is already installed'
 else
-  (curl -s -o /tmp/git-2.9.3.tar.gz https://github.com/git/git/archive/v2.9.3.tar.gz
+  (curl -s -o /tmp/git-2.9.3.tar.gz https://www.kernel.org/pub/software/scm/git/git-2.9.3.tar.gz
   tar zxf /tmp/git-2.9.3.tar.gz -C /tmp/
   cd /tmp/git-2.9.3
   make prefix=/usr/local all
