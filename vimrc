@@ -119,7 +119,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleLazy "vim-perl/vim-perl", {"autoload": {"filetypes": ['perl']}}
   NeoBundle 'Shougo/unite.vim'
   NeoBundleLazy 'suan/vim-instant-markdown', {"autoload": {"filetypes": ['markdown']}} " Instant Markdown previews from VIm!
-  NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
+#  NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}} " A Go bundle for Vundle or Pathogen
+  NeoBundleLazy 'nsf/gocode', {"autoload": {"filetypes": ['go']}}
   NeoBundleLazy "elixir-lang/vim-elixir", {"autoload": {"filetypes": ['elixir', 'eelixir']}}
   NeoBundleLazy "scrooloose/syntastic", {"autoload": {"filetypes": ['python', 'python3', 'css', 'rst']}}
   NeoBundleLazy "pangloss/vim-javascript", {"autoload": {"filetypes": ['javascript']}}
