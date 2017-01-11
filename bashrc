@@ -91,7 +91,7 @@ export GOPATH=$HOME/gowork
 
 # java
 ## http://qiita.com/hereticreader/items/79d9bddb77efaf2ca255
-[ -e /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+[ -e /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
