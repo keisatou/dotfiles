@@ -88,6 +88,7 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 
 # go
 export GOPATH=$HOME/gowork
+export PATH=$PATH:$GOPATH/bin
 
 # java
 ## http://qiita.com/hereticreader/items/79d9bddb77efaf2ca255
