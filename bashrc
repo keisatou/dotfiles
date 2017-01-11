@@ -9,7 +9,7 @@ export PS1='[\u@\h]$ '
 export LESS='r'
 
 # Aliases
-alias ls="ls --color"
+#alias ls="ls --color"
 alias ll="ls -la"
 alias rm="rm -i"
 alias cp="cp -i"
