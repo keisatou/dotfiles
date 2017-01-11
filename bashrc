@@ -87,9 +87,7 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 #  eval "$(pyenv virtualenv-init -)"
 
 # go
-#export PATH=${PATH}:/usr/local/go/bin
-#export GOPATH=${HOME}/go
-#export PATH=${GOPATH}/bin:${PATH}
+export GOPATH=$HOME/gowork
 
 # java
 ## http://qiita.com/hereticreader/items/79d9bddb77efaf2ca255
