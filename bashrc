@@ -103,5 +103,8 @@ export PATH="$HOME/.node/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Chef
+[ -e ~/.chefdk ] && eval "$(chef shell-init bash)"
+
 # Include external file if exists
 [ -e $HOME/.bashrc_ext ] && source $HOME/.bashrc_ext
