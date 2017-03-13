@@ -57,12 +57,6 @@ set t_Co=256
 
 
 "
-" appearance
-"
-colorscheme mycolor
-
-
-"
 " status line
 "
 set laststatus=2
@@ -142,6 +136,11 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+"
+" appearance
+"
+colorscheme mycolor
 
 ""
 "" NeoBundle https://github.com/Shougo/neobundle.vim
