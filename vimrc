@@ -123,6 +123,10 @@ if dein#load_state(s:dein_dir)
 
   " Required:
   call dein#end()
+
+  " appearance (see: https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt#L1017 )
+  colorscheme mycolor
+
   call dein#save_state()
 endif
 
@@ -137,10 +141,6 @@ endif
 
 "End dein Scripts-------------------------
 
-"
-" appearance
-"
-colorscheme mycolor
 
 ""
 "" NeoBundle https://github.com/Shougo/neobundle.vim
