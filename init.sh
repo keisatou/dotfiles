@@ -55,5 +55,7 @@ ln -sf                      "$DOTFILES/bash_profile"   "$HOME/.bash_profile"
 ln -sf                      "$DOTFILES/bashrc"         "$HOME/.bashrc"
 ln -sf                      "$DOTFILES/gitignore"      "$HOME/.gitignore"
 
-# vim -c ':NeoBundleInstall!'
+# install dein.vim
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ${HOME}/.vim/dein
 vim -c ':call dein#install()'
