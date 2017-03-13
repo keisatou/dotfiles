@@ -42,9 +42,6 @@ then
     exit 1
 fi
 
-git submodule update --init
-git submodule foreach 'git checkout master'
-
 ln -sf                      "$DOTFILES/vimrc"          "$HOME/.vimrc"
 ln -sf${OPT_LN_NOTRACK}     "$DOTFILES/vim"            "$HOME/.vim"
 ln -sf                      "$DOTFILES/tmux.conf"      "$HOME/.tmux.conf"
