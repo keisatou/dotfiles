@@ -120,6 +120,7 @@ if dein#load_state(s:dein_dir)
         \ let g:go_fmt_command = \"goimports\"\n
         \ "})
   call dein#add('scrooloose/syntastic')
+  call dein#add('posva/vim-vue')
 
   " Required:
   call dein#end()
