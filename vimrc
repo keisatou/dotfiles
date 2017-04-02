@@ -119,8 +119,18 @@ if dein#load_state(s:dein_dir)
         \ let g:go_auto_type_info = 1\n
         \ let g:go_fmt_command = \"goimports\"\n
         \ "})
-  call dein#add('scrooloose/syntastic')
+  " call dein#add('scrooloose/syntastic')
   call dein#add('posva/vim-vue')
+  call dein#add('w0rp/ale', {
+        \ 'hook_add': "
+        \ let g:ale_linters = {
+        \ 'html': [],
+        \ 'css': ['stylelint'],
+        \ 'javascript': ['eslint'],
+        \ 'vue': ['eslint']
+        \ }\n
+        \ let g:ale_linter_aliases = {'vue': 'css'}\n
+        \ "})
 
   " Required:
   call dein#end()
@@ -141,6 +151,7 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
 
 
 ""
@@ -291,6 +302,15 @@ autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+"
+" Vue.js
+"
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.vue set filetype=vue.javascript.css
+augroup END
+
 
 "
 " Templates
