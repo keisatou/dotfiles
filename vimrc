@@ -131,6 +131,10 @@ if dein#load_state(s:dein_dir)
         \ }\n
         \ let g:ale_linter_aliases = {'vue': 'css'}\n
         \ "})
+  call dein#add('mattn/emmet-vim', {
+        \ 'hook_add': "
+        \ let g:user_emmet_settings = {'vue': {'extends': 'html'}}
+        \ "})
 
   " Required:
   call dein#end()
@@ -308,7 +312,7 @@ autocmd FileType go nmap <leader>t  <Plug>(go-test)
 "
 augroup FiletypeGroup
   autocmd!
-  au BufNewFile,BufRead *.vue set filetype=vue.javascript.css
+  au BufNewFile,BufRead *.vue set filetype=vue.javascript.css.html
 augroup END
 
 
