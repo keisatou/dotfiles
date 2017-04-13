@@ -20,8 +20,6 @@ let mapleader = ","
 "
 set background=dark
 " syntax on
-set tabstop=2
-set shiftwidth=2
 set incsearch
 set hidden
 set modeline
@@ -182,6 +180,11 @@ augroup FiletypeGroup
   autocmd!
   au BufNewFile,BufRead *.vue set filetype=vue.javascript.css.html
 augroup END
+
+"
+"  set whitespaces by filetype
+"
+autocmd Filetype sh setlocal ts=4 sw=4 sts=4 noexpandtab
 
 
 "
