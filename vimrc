@@ -185,6 +185,7 @@ augroup END
 "  set whitespaces by filetype
 "
 autocmd Filetype sh setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype yaml setlocal ts=4 sw=4 sts=4 expandtab
 
 
 "
