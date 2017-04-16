@@ -131,7 +131,8 @@ if dein#load_state(s:dein_dir)
         \ "})
   call dein#add('mattn/emmet-vim', {
         \ 'hook_add': "
-        \ let g:user_emmet_settings = {'vue': {'extends': 'html'}}
+        \ let g:user_emmet_settings = {'vue': {'extends': 'html'}}\n
+        \ let g:user_emmet_leader_key = '<C-i>'
         \ "})
 
   " Required:
