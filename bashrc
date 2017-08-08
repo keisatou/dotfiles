@@ -85,6 +85,10 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
   export PATH=${HOME}/.pyenv/bin:${PATH} &&
   eval "$(pyenv init -)" &&
 #  eval "$(pyenv virtualenv-init -)"
+## anyenv
+## XXX: delete *env above later
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 
 # go
 export GOPATH=$HOME/gowork
