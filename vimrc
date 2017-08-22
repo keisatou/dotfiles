@@ -188,7 +188,7 @@ augroup END
 "
 autocmd Filetype sh setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype groovy setlocal ts=4 sw=4 sts=4 expandtab
-autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype yaml setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
