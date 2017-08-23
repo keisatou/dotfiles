@@ -193,6 +193,7 @@ autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 
 
 "
