@@ -135,6 +135,7 @@ if dein#load_state(s:dein_dir)
         \ let g:user_emmet_leader_key = '<C-i>'
         \ "})
   call dein#add('stephpy/vim-yaml')
+  call dein#add('vim-scripts/groovyindent-unix')
 
   " Required:
   call dein#end()
