@@ -1,8 +1,114 @@
+#
 # Vim
-*.swp
+#
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+
+#
+# Mac
+#
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+#
+# Chef
+#
+
+.autotest
+coverage
+.DS_Store
+pkg/*
+tags
+*/tags
+*~
+.chef
+results
+
+# You should check in your Gemfile.lock in applications, and not in gems
+external_tests/*.lock
+/Gemfile.local
+
+# ignore some common Bundler 'binstubs' directory names
+# http://gembundler.com/man/bundle-exec.1.html
+b/
+binstubs/
+.bundle
+# RVM and RBENV ruby version files
+.rbenv-version
+.rvmrc
+.ruby-version
+.ruby-gemset
+
+# IDE files
+.project
+.idea
+
+# Documentation
+_site/*
+.yardoc/
+doc/
+
+# Test Kitchen
+.kitchen/
 
 # Vagrant
-.vagrant
+Vagrantfile
+.vagrant/
 
-# Bundler
-.bundle
+# Kitchen Tests Local Mode Data
+kitchen-tests/nodes/*
+
+# Temporary files present during spec runs
+spec/data/test-dir
+spec/data/nodes
+/config/
+
+# acceptance binstubs
+acceptance/bin/*
+
+vendor/
+acceptance/vendor
+kitchen-tests/vendor
+
+# Visual Studio Code files
+.vscode
