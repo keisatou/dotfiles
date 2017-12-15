@@ -8,9 +8,27 @@ export HISTCONTROL=ignoreboth
 export PS1='[\u@\h]$ '
 export LESS='r'
 
+# Platform specific settings.
+PLATFORM=$(uname)
+case "$PLATFORM" in
+    'Darwin')
+        # macOS
+        OPT_LS_COLOR='-G'
+        ;;
+    'Linux')
+        # CentOS etc.
+        OPT_LS_COLOR='--color'
+        ;;
+    *)
+        echo "unsupported OS"
+        exit 1
+        ;;
+esac
+
 # Aliases
-#alias ls="ls --color"
+alias ls="ls $OPT_LS_COLOR"
 alias ll="ls -la"
+alias lt="ls -rlt"
 alias rm="rm -i"
 alias cp="cp -i"
 alias j="jobs"
