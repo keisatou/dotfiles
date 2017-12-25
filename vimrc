@@ -5,6 +5,9 @@ map <C-l> :bnext<CR>
 map <C-k> :bprevious<CR>
 nnoremap j gj
 nnoremap k gk
+nnoremap ss :split<CR>
+nnoremap sv :vsplit<CR>
+
 " toggle highlight with C-h
 nmap <C-H> :se hls!<CR>
 
