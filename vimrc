@@ -117,7 +117,7 @@ if dein#load_state(s:dein_dir)
         \ let g:go_highlight_extra_types = 1\n
         \ let g:go_highlight_operators = 1\n
         \ let g:go_highlight_build_constraints = 1\n
-        \ let g:go_auto_type_info = 1\n
+        \ let g:go_auto_type_info = 0\n
         \ let g:go_fmt_command = \"goimports\"\n
         \ "})
   " call dein#add('scrooloose/syntastic')
