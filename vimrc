@@ -214,3 +214,6 @@ autocmd BufNewFile *.html 0r ~/.vim/template/bootstrap.html
 if !empty(glob("~/.vimrc_ext"))
   source ~/.vimrc_ext
 endif
+
+
+set ttimeoutlen=0

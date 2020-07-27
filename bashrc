@@ -86,9 +86,9 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 
 # *env settings
 ## rbenv
-[ -d ${HOME}/.rbenv ] &&
-  export PATH=${HOME}/.rbenv/shims:${PATH} &&
-  eval "$(rbenv init -)"
+#[ -d ${HOME}/.rbenv ] &&
+#  export PATH=${HOME}/.rbenv/shims:${PATH} &&
+#  eval "$(rbenv init -)"
 ## phpenv
 [ -d ${HOME}/.phpenv ] &&
   export PATH=${HOME}/.phpenv/bin:${HOME}/.phpenv/shims:${PATH} &&
@@ -97,11 +97,11 @@ export PATH=${HOME}/bin:/usr/local/bin:${PATH}
 [ -d ${HOME}/.plenv ] &&
   export PATH=${HOME}/.plenv/bin:${HOME}/.plenv/shims:${PATH} &&
   eval "$(plenv init -)"
-## pyenv
+# pyenv
 [ -d ${HOME}/.pyenv ] &&
   export PYENV_ROOT="$HOME/.pyenv" &&
   export PATH=${HOME}/.pyenv/bin:${PATH} &&
-  eval "$(pyenv init -)" &&
+  eval "$(pyenv init -)"
 #  eval "$(pyenv virtualenv-init -)"
 ## anyenv
 ## XXX: delete *env above later
@@ -115,7 +115,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # java
 ## http://qiita.com/hereticreader/items/79d9bddb77efaf2ca255
-[ -e /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+[ -e /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
@@ -127,7 +127,22 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Chef
-[ -e ~/.chefdk ] && eval "$(chef shell-init bash)"
+#[ -e ~/.chefdk ] && eval "$(chef shell-init bash)"
 
 # Include external file if exists
 [ -e $HOME/.bashrc_ext ] && source $HOME/.bashrc_ext
+
+
+function bsetcontext() {
+        bpctl contexts set $1_$2 --namespace=$1 --bp-api-endpoint=$3 --bp-api-certificate=/Users/$(whoami)/.bp/zcp_ca.pem
+        bpctl contexts list
+        bpctl contexts use $1_$2
+        bpctl clusters list
+}
+
+
+export GEM_HOME=/Users/keisatou/.rbenv/versions/2.5.6/lib/ruby/gems/2.5.0
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+source <(kubectl completion bash)
