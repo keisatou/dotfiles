@@ -1,5 +1,8 @@
 setopt INTERACTIVE_COMMENTS
 
+NEWLINE=$'\n'
+export PS1="%m${NEWLINE}%2d$ "
+
 # zsh-completions
 if type brew &>/dev/null; then
         FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
