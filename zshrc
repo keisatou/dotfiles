@@ -1,7 +1,7 @@
 setopt INTERACTIVE_COMMENTS
+bindkey \^U backward-kill-line
 
-NEWLINE=$'\n'
-export PS1="%m${NEWLINE}%2d$ "
+export PS1="%2d$ "
 
 # zsh-completions
 if type brew &>/dev/null; then
@@ -81,14 +81,26 @@ export PATH="$HOME/.node/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# python
+export PATH="$HOME/.pyenv/bin:$PATH"
+
 # Chef
 #[ -e ~/.chefdk ] && eval "$(chef shell-init bash)"
 
 # Include external file if exists
 [ -e $HOME/.zshrc_ext ] && source $HOME/.zshrc_ext
 
-export GEM_HOME=/Users/keisatou/.rbenv/versions/2.5.6/lib/ruby/gems/2.5.0
+#export GEM_HOME=/Users/keisatou/.rbenv/versions/2.5.6/lib/ruby/gems/2.5.0
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 source <(kubectl completion zsh)
+
+function mkkeys() {
+    ssh-keygen -b 4096 -t rsa -f ~/id_rsa.`date '+%Y%m%d'`-$USER -C "$USER-`date '+%Y%m%d'`"
+}
+
+export PATH=$HOME/.cargo/bin:$PATH
+
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/gradle@6/bin:$PATH"

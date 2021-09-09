@@ -8,6 +8,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
+	autocrlf = input
 [pager]
 	log = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
 	show = (command -v diff-highlight > /dev/null && diff-highlight | less) || less
